@@ -5,3 +5,12 @@ services:
 scripts:
   - docker build -t lorebianchi/node .
   - docker images lorebianchi/node 
+
+before_deploy:
+  - docker login -u <lorebianchi> -p <Aguq2020Goo123>
+
+deploy:
+  provider: script
+  script: docker push lorebianchi/node
+  on:
+    branch: master
