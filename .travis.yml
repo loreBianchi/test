@@ -7,7 +7,7 @@ scripts:
   - docker images lorebianchi/node 
 
 before_deploy:
-  - docker login -u lorebianchi -p Aguq2020Goo123
+  - docker login -u $docker_username -p Aguq2020Goo123
 
 deploy:
   provider: script
